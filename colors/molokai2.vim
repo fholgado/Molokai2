@@ -1,6 +1,7 @@
 " Vim color file
 "
-" Author: Tomas Restrepo <tomas@winterdom.com>
+" Original Author: Tomas Restrepo <tomas@winterdom.com>
+" Modified by: Federico Holgado <fholgado@gmail.com>
 "
 " Note: Based on the monokai theme for textmate
 " by Wimer Hazenberg and its darker variant 
@@ -18,7 +19,7 @@ if version > 580
         syntax reset
     endif
 endif
-let g:colors_name="molokai"
+let g:colors_name="molokai2"
 
 if exists("g:molokai_original")
     let s:molokai_original = g:molokai_original
@@ -107,7 +108,13 @@ hi WildMenu        guifg=#66D9EF guibg=#000000
 
 hi MyTagListFileName guifg=#F92672 guibg=#1B1D1E gui=bold
 
-
+" MiniBufExpl Colors
+hi MBEVisibleActive guifg=#A6DB29 guibg=fg
+hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
+hi MBEVisibleChanged guifg=#F1266F guibg=fg
+hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
+hi MBEChanged guifg=#CD5907 guibg=fg
+hi MBENormal guifg=#808080 guibg=fg
 
 if s:molokai_original == 1
    hi Normal          guifg=#F8F8F2 guibg=#272822
@@ -219,12 +226,12 @@ if &t_Co > 255
    hi CursorColumn                ctermbg=234
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=250 ctermbg=234
-end
 
-" MiniBufExpl Colors
-hi MBEVisibleActive guifg=#A6DB29 guibg=fg
-hi MBEVisibleChangedActive guifg=#F1266F guibg=fg
-hi MBEVisibleChanged guifg=#F1266F guibg=fg
-hi MBEVisibleNormal guifg=#5DC2D6 guibg=fg
-hi MBEChanged guifg=#CD5907 guibg=fg
-hi MBENormal guifg=#808080 guibg=fg
+   " MiniBufExpl Colors
+   hi MBEVisibleActive ctermfg=75 cterm=bold
+   hi MBEVisibleChangedActive ctermfg=214
+   hi MBEVisibleChanged ctermfg=210
+   hi MBEVisibleNormal ctermfg=48
+   hi MBEChanged ctermfg=196
+   hi MBENormal ctermfg=46
+end
